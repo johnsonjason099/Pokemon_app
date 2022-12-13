@@ -1,3 +1,20 @@
+const mongoose = require('mongoose');
+
+const pokemonSchema = new mongoose.Schema({
+    name : {
+        type: String,
+        require:true
+    },
+    image : {
+        type: {},
+        require: true
+    },
+    })
+
+    const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+
+
+
 const pokemon = [
     {name: "bulbasaur", img: "http://img.pokemondb.net/artwork/bulbasaur"},
     {name: "ivysaur", img: "http://img.pokemondb.net/artwork/ivysaur"},
@@ -8,4 +25,4 @@ const pokemon = [
     {name: "wartortle", img: "http://img.pokemondb.net/artwork/wartortle"}
  ];
 
- module.export = pokemon;
+ module.exports = pokemon;
